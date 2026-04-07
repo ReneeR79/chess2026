@@ -74,7 +74,16 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
         //the reason this is required has to do with how visual components are rendered, so if you neglect to do this
         //you will not see any of your squares show up on the board!
         // Where's the "add" method? Stay tuned for next unit where we discover where it is and why we can do this action.
-        
+        for(int row = 0; row < size; row++){
+            for(int col = 0; col < size; col++){
+                if((row+col)%2 == 0){
+                    whiteSquare.add(new Point(col, row));
+                }
+                else{
+                    blackSquares.add(new Point(col, row));
+                }
+            }
+        }
         
         initializePieces();
 
