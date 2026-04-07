@@ -61,6 +61,8 @@ public class Piece {
     //returns an arraylist of squares which are legal to move to
     //please note that your piece must have some sort of logic. Just being able to move to every square on the board is not
     //going to score any points.
+    
+    //A queen that can only move 5 spaces
     public ArrayList<Square> getLegalMoves(Board b, Square start){
         int rowDiff = Math.abs(endRow - startRow);
         int colDiff = Math.abs(endCol - startCol);
