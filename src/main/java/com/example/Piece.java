@@ -61,6 +61,11 @@ public class Piece {
     //please note that your piece must have some sort of logic. Just being able to move to every square on the board is not
     //going to score any points.
     public ArrayList<Square> getLegalMoves(Board b, Square start){
-    	return null;
+    	Square [][] board = b.getSquareArray();
+        int startRow = start.getRow();
+        int startCol = start.getCol();
+        ArrayList<Square> moves = new ArrayList<Square>();
+        // create an arrayList of squares which are legal for your piece to move to
+        if()
     }
 }
