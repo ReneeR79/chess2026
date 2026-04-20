@@ -50,7 +50,6 @@ public class Piece {
     //return a list of every square that is "controlled" by this piece. A square is controlled
     //if the piece capture into it legally.
     public ArrayList<Square> getControlledSquares(Square[][] board, Square start) {
-
      return null;
     }
     
@@ -61,16 +60,7 @@ public class Piece {
     //returns an arraylist of squares which are legal to move to
     //please note that your piece must have some sort of logic. Just being able to move to every square on the board is not
     //going to score any points.
-    
-    //A queen that can only move 5 spaces
     public ArrayList<Square> getLegalMoves(Board b, Square start){
-        int rowDiff = Math.abs(endRow - startRow);
-        int colDiff = Math.abs(endCol - startCol);
-        if(rowDiff == 0 && colDiff == 0){
-            return false;
-        }
-        boolean isQueenMove = (rowDiff == colDiff) || (rowDiff == 0) || (colDiff == 0);
-        boolean withinLimit = Math.max(rowDiff, colDiff) <= 5;
-    	return isQueenMove && withinLimit;
+    	return null;
     }
 }
