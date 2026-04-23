@@ -8,6 +8,10 @@ import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
+//Renee Rosenheim
+//5Queen
+//A queen that can only move up to five spaces
+
 //you will need to implement two functions in this file.
 public class Queen extends Piece{
 
