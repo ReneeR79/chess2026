@@ -163,9 +163,19 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
     public void mouseReleased(MouseEvent e) {
         endSquare = (Square) this.getComponentAt(new Point(e.getX(), e.getY()));
 
-        // using currPiece
-        if(fromMoveSquare!= null){
+        if(fromMoveSquare!= null && currPiece!= null){
             fromMoveSquare.setDisplay(true);
+            if(currPiece.getLegalMoves(this, fromMoveSquare).contains(endSquare) && whiteTurn == currPiece.getColor()) {
+                Piece captured = endSquare.getOccupyingPiece();
+                endSquare.put(currPiece);
+                fromMoveSquare.removePiece();
+                // if(isInCheck(whiteTurn)) {
+                //     fromMoveSquare.put(currPiece);
+                //     endSquare.put(captured);
+                // }else {
+                    whiteTurn = !whiteTurn;
+                // }
+            }
         }
         currPiece = null;
         repaint();
