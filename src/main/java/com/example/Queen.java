@@ -47,7 +47,7 @@ public class Queen extends Piece{
         }
 
         // left
-        for (int col = -1; col <= -5; col--) {
+        for (int col = -1; col >= -5; col--) {
             // check to see if the square I'm moving to exists
             if (startCol + col < 0) {
                 break;
@@ -60,7 +60,7 @@ public class Queen extends Piece{
         }
 
         // up
-        for (int row = -1; row <= -5; row--) {
+        for (int row = -1; row >= -5; row--) {
             // check to see if the square I'm moving to exists
             if (startRow + row < 0) {
                 break;
@@ -175,7 +175,7 @@ public class Queen extends Piece{
         }
 
         // left
-        for (int col = -1; col <= -5; col--) {
+        for (int col = -1; col >= -5; col--) {
             // check to see if the square I'm moving to exists
             if (startCol + col < 0) {
                 break;
@@ -190,7 +190,7 @@ public class Queen extends Piece{
         }
 
         // up
-        for (int row = -1; row <= -5; row--) {
+        for (int row = -1; row >= -5; row--) {
             // check to see if the square I'm moving to exists
             if (startRow + row < 0) {
                 break;
